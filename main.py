@@ -3,6 +3,11 @@ from phase2.langgraph_agent import ContentEngineAgent
 from phase2.visualize_graph import visualize_graph
 from phase3.test_injection_defense import test_phase3
 from pathlib import Path
+import sys
+
+# Fix encoding issues on Windows for printing emojis/special characters
+if sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 def main():
     """Run all phases with logging."""
