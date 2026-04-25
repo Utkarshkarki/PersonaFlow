@@ -11,7 +11,7 @@ def test_phase3():
     print("="*70 + "\n")
     
     # Initialize
-    engine = DefenseEngine(model_name="qwen2.5")
+    engine = DefenseEngine(model_name="qwen2.5:0.5b")
     detector = PromptInjectionDetector()
     
     # Bot A persona

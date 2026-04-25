@@ -27,7 +27,7 @@ def main():
     print("\n[PHASE 2] Building and visualizing LangGraph...")
     visualize_graph()
     
-    agent = ContentEngineAgent(model_name="qwen2.5")
+    agent = ContentEngineAgent(model_name="qwen2.5:0.5b")
     personas = {
         "A": "I believe AI and crypto will solve all human problems. I am highly optimistic about technology, Elon Musk, and space exploration. I dismiss regulatory concerns.",
         "B": "I believe late-stage capitalism and tech monopolies are destroying society. I am highly critical of AI, social media, and billionaires. I value privacy and nature.",

@@ -38,7 +38,7 @@ class DefenseEngine:
     
     def __init__(
         self,
-        model_name: str = "qwen2.5",
+        model_name: str = "qwen2.5:0.5b",
         base_url: str = "http://localhost:11434"
     ):
         from langchain_ollama import ChatOllama
