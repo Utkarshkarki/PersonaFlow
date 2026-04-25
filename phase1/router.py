@@ -61,7 +61,7 @@ class PostRouter:
         
         # Log to file if requested
         if log_file:
-            with open(log_file, 'a') as f:
+            with open(log_file, 'a', encoding='utf-8') as f:
                 f.write(f"\n{'='*60}\n")
                 f.write(f"POST: {post_content[:80]}...\n")
                 f.write(result.score_summary)
@@ -72,6 +72,6 @@ class PostRouter:
     def export_logs(self, output_file: Path):
         """Export all routing logs as JSON."""
         logs_json = [log.model_dump() for log in self.routing_logs]
-        with open(output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(logs_json, f, indent=2)
         print(f"[+] Exported {len(self.routing_logs)} routing logs to {output_file}")

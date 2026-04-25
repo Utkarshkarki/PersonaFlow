@@ -13,7 +13,7 @@ def visualize_graph():
         # Method 1: Using Mermaid (recommended)
         mermaid_diagram = agent.graph.get_graph().draw_mermaid()
         
-        with open(output_dir / "langgraph_mermaid.md", "w") as f:
+        with open(output_dir / "langgraph_mermaid.md", "w", encoding='utf-8') as f:
             f.write("# LangGraph State Machine\n\n")
             f.write("```mermaid\n")
             f.write(mermaid_diagram)
@@ -28,7 +28,7 @@ def visualize_graph():
         # Method 2: ASCII representation
         ascii_diagram = agent.graph.get_graph().draw_ascii()
         
-        with open(output_dir / "langgraph_ascii.txt", "w") as f:
+        with open(output_dir / "langgraph_ascii.txt", "w", encoding='utf-8') as f:
             f.write(ascii_diagram)
         
         print(f"[+] ASCII diagram saved to logs/graphs/langgraph_ascii.txt")

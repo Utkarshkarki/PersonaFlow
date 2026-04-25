@@ -103,7 +103,7 @@ I dismiss regulatory concerns."""
         defense_3.model_dump()
     ]
     
-    with open(log_file, 'w') as f:
+    with open(log_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2)
     
     print(f"[+] Phase 3 tests complete. Results saved to {log_file}")
